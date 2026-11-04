@@ -36,9 +36,6 @@ SAAMBE_BINARY = "SAAMBE_BINARY"
 # Supported versions
 V1_0 = '1.0'
 
-# Plugin version
-SAAMBE_VERSION = '0.1'
-
 # Protocol versions 
 SAAMBE_DEFAULT_VERSION = V1_0
 
