@@ -35,7 +35,6 @@ from scipion.install.funcs import InstallHelper
 # Plugin imports
 from .constants import *
 
-_logo = "saambe_icon.png"
 _references = ['Pahari2020']
 
 

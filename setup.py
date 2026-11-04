@@ -56,6 +56,6 @@ setup(
     },
     entry_points={'pyworkflow.plugin': 'saambe = saambe'},
     package_data={  # Optional
-       'saambe': [_logo, 'protocols.conf'],
+       'saambe': ["saambe_icon.png", 'protocols.conf'],
     }
 )
