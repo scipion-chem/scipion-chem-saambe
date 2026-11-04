@@ -25,9 +25,19 @@ with open('requirements.txt') as f:
 # Arguments marked as "Required" below must be included for upload to PyPI.
 # Fields marked as "Optional" may be commented out.
 
+VERSION_FILE = os.path.join(here, "saambe", "version.py")
+
+def get_version():
+    with open(VERSION_FILE, "r") as f:
+        content = f.read()
+    match = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', content, re.M)
+    if not match:
+        raise RuntimeError(f"Unable to find version string in {VERSION_FILE}")
+    return match.group(1)
+
 setup(
     name='scipion-chem-saambe',  # Required
-    version=__version__,  # Required
+    version=get_version(),  # Required
     description='Scipion plugin for Alexov group in http://compbio.clemson.edu/lab/',  # Required
     long_description=long_description,  # Optional
     url='https://github.com/scipion-chem/scipion-chem-saambe',  # Optional
